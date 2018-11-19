@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'ecommerce.urls'
@@ -124,3 +125,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
