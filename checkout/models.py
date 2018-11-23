@@ -16,7 +16,7 @@ class Order(models.Model):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
         
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False)
+    order = models.ForeignKey(Order, null=False, on_delete=models.PROTECT)
     product = models.ForeignKey(Product, null=False, on_delete=models.PROTECT)
     quantity = models.IntegerField(blank=False)
     
