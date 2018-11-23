@@ -17,7 +17,7 @@ class Order(models.Model):
         
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False)
-    product = models.ForeignKey(Product, null=False)
+    product = models.ForeignKey(Product, null=False, on_delete=models.PROTECT)
     quantity = models.IntegerField(blank=False)
     
     def __str__(self):
